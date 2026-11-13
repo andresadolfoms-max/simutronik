@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricSim", "ElectricSim.csproj", "{B3D5E9A1-4C77-4E2B-9F31-8A20E51C6D42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricSim.Core", "Core\ElectricSim.Core.csproj", "{2C5A713C-1C2A-412D-B359-B2619D04758D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{B6D2536C-5A08-4F18-9B43-1248F170FCAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3D5E9A1-4C77-4E2B-9F31-8A20E51C6D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D5E9A1-4C77-4E2B-9F31-8A20E51C6D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D5E9A1-4C77-4E2B-9F31-8A20E51C6D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D5E9A1-4C77-4E2B-9F31-8A20E51C6D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5A713C-1C2A-412D-B359-B2619D04758D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5A713C-1C2A-412D-B359-B2619D04758D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5A713C-1C2A-412D-B359-B2619D04758D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5A713C-1C2A-412D-B359-B2619D04758D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D2536C-5A08-4F18-9B43-1248F170FCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D2536C-5A08-4F18-9B43-1248F170FCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D2536C-5A08-4F18-9B43-1248F170FCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D2536C-5A08-4F18-9B43-1248F170FCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

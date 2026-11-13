@@ -1,0 +1,47 @@
+Bloque DEMO 28 sacado de Tests/Program.cs en el Paso 7-1 del plan.
+
+Motivo: probaba el motor VIEJO, cuyo modelo era RPM = RPMmax*(P/P_nom). Las
+stats que asertaba (PotenciaNominal, RPMMaximas, Reactividad) ya no existen:
+el motor nuevo tiene k_e, k_t, ParCarga, Friccion e Inercia, y su velocidad
+sale de una ecuacion diferencial. Los assertions median el comportamiento
+incorrecto (RPM proporcional a la POTENCIA), asi que no se pueden
+"actualizar": los reemplaza el DEMO 69.
+
+El motor viejo esta en Deprecated/Core/Motor.cs.
+------------------------------------------------------------------------
+// ============================================================
+// DEMO 28: MOTOR - arranca con inercia y la POLARIDAD decide el giro.
+//   Dar vuelta la bateria = el motor gira al reves. La leccion clasica.
+// ============================================================
+Console.WriteLine("\n====================================================");
+Console.WriteLine(" DEMO 28: Motor DC - inercia y sentido de giro por polaridad");
+Console.WriteLine("====================================================\n");
+
+var graph28 = new CircuitGraph();
+var bat28 = new Battery("B28", 9);
+var motor28 = new Motor("Motorcito", resistenciaBobinado: 25);
+graph28.Agregar(bat28);
+graph28.Agregar(motor28);
+graph28.Conectar(bat28.PinA, motor28.PinA);   // + al borne A: giro horario
+graph28.Conectar(motor28.PinB, bat28.PinB);
+graph28.Tick(0.1);
+double rpmArranque28 = motor28.RPM;
+for (int t = 0; t < 25; t++) graph28.Tick(0.1);
+double rpmRegimen28 = motor28.RPM;
+Console.WriteLine($"Al primer tick: {rpmArranque28:F0} RPM | En regimen (2.6s): {rpmRegimen28:F0} RPM (P={motor28.Power:F2}W de {motor28.PotenciaNominal}W nominales)");
+Verificar("arranca con INERCIA (primer tick bien lejos del regimen)", rpmArranque28 < rpmRegimen28 * 0.5);
+Verificar("en regimen gira en sentido horario (RPM positivas)", rpmRegimen28 > 800);
+
+// Bateria al reves: mismo motor, bornes invertidos.
+var graph28b = new CircuitGraph();
+var bat28b = new Battery("B28b", 9);
+var motor28b = new Motor("MotorAlReves", resistenciaBobinado: 25);
+graph28b.Agregar(bat28b);
+graph28b.Agregar(motor28b);
+graph28b.Conectar(bat28b.PinA, motor28b.PinB);   // + al borne B: giro ANTIHORARIO
+graph28b.Conectar(motor28b.PinA, bat28b.PinB);
+for (int t = 0; t < 25; t++) graph28b.Tick(0.1);
+Console.WriteLine($"Con la bateria invertida: {motor28b.RPM:F0} RPM (negativas = antihorario)");
+Verificar("bateria al reves -> gira al reves (RPM negativas)", motor28b.RPM < -800);
+
+

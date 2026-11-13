@@ -1,0 +1,724 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "arduino_uno.real",
+      "pos": [
+        -0.15,
+        0,
+        0.25
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Frecuencia del reloj": 16
+      },
+      "estado": {
+        "hex": ":100000000C9422000C94110200000000000000007B\n:1000100000000000000000000000000000000000E0\n:1000200000000000000000000000000000000000D0\n:1000300000000000000000000000000000000000C0\n:100040000C94F00111241FBE0FEF0DBF08E00EBF8E\n:10005000109200011092010110920201109203010E\n:1000600010920401109205011092060110920701EE\n:10007000109208011092090110920A0110920B01CE\n:1000800010920C0110920D0110920E0110920F01AE\n:10009000109210011092110110921201109213018E\n:1000A00001E00093070100ED0AB904E10BB903E395\n:1000B00004B915B802E00093690001E00DBB03E04C\n:1000C00004BD03E005BD01E000936E0001E0009374\n:1000D000800003E0009381001092890000E4009307\n:1000E0007C0007E800937A0007E60093C4001092B2\n:1000F000C50008E10093C10006E00093C2007894B7\n:10010000E8E7F4E02FD100910501002319F01092E7\n:10011000050100D10091C00007FF08C00091C60092\n:100120000D3611F00D34B1F7F5D0F4CF00E002D167\n:1001300080930F019093100101E0FCD08093110196\n:100140009093120100910701002351F0843363E082\n:10015000960780F0109207010BB10F7E0BB90AC011\n:100160008E3C60E0960730F401E0009307010BB18C\n:1001700000610BB92BB12F77913008F020682BB9B3\n:1001800025B12E7C803E61E0960708F021608C3B13\n:1001900062E0960708F0206100910601002339F41F\n:1001A00060910F01709110018617970708F0206287\n:1001B00025B900910601002341F08FEF01E0009383\n:1001C000800005B1026005B92AC0843B60E0960753\n:1001D00018F484EB90E006C0823B62E0960710F0D2\n:1001E00082EB92E0845B904096958795803039F45D\n:1001F00001E00093800005B10D7F05B910C08F3F6D\n:1002000039F401E00093800005B1026005B907C030\n:10021000109289008093880001E800938000809309\n:10022000130171D0A82FB92F4091090150910A01F3\n:10023000841B950B0091060100236DE209F064E137\n:1002400070E08617970730F1A0930901B0930A0177\n:100250000091080103950F7100930801003118F017\n:100260001FE1101B012F11E1019F002D112400300F\n:1002700031F413E014BD1BB11F7B1BB90BC00F3F42\n:1002800031F413E014BD1BB110641BB903C007BDEA\n:1002900013E814BD38D0A82FB92F40910B0150910D\n:1002A0000C01841B950B803961E0960708F42BCF75\n:1002B000A0930B01B0930C01EAECF4E053D0009151\n:1002C0000601002319F4E0EDF4E002C0E6EDF4E0ED\n:1002D00049D0ECEDF4E046D080910F0190911001EF\n:1002E00047D0E2EEF4E03ED08091110190911201EE\n:1002F0003FD0E8EEF4E036D08091130190E038D0A2\n:100300000AE029D000CFF89480910001909101017A\n:10031000789408950091060111E0012700930601E9\n:10032000002321F0ECE9F4E01DD00895E4EBF4E0C3\n:1003300019D00895006400937C0010917A00106435\n:1003400010937A0010917A0016FDFCCF809178000E\n:100350009091790008951091C00015FFFCCF009393\n:10036000C60008950591002311F0F5DFFBCF089535\n:1003700040E050E068EE73E08617970720F0861B98\n:10038000970B5395F9CF052F042B21F041E000E3A3\n:10039000050FE1DF50E064E670E08617970720F074\n:1003A000861B970B5395F9CF052F042B21F041E0C5\n:1003B00000E3050FD0DF50E06AE070E08617970792\n:1003C00020F0861B970B5395F9CF052F042B21F0B6\n:1003D00041E000E3050FBFDF00E3080FBCDF089535\n:1003E0000F921F920FB60F928F939F93AF938091AE\n:1003F000000190910101A09104010196AD5FAD371C\n:1004000010F0AD5701968093000190930101A093E5\n:100410000401AF919F918F910F900FBE1F900F908D\n:1004200018950F921F920FB60F924F935F936F9391\n:100430007F93409100015091010160910D017091F5\n:100440000E01461B570B64EB70E04617570758F038\n:1004500061E06093050140910001509101014093DA\n:100460000D0150930E017F916F915F914F910F900D\n:100470000FBE1F900F90189553494D5554524F4E33\n:10048000494B204553544143494F4E2076312E303D\n:1004900020494E4943494144410A00004556454ED2\n:1004A000544F3A204D4F444F20545552424F204F05\n:1004B0004E0A00004556454E544F3A204D4F444F8A\n:1004C000204E4F524D414C0A00004D4F444F3D00CD\n:1004D0004E4F524D0000545552424F002053503D54\n:0E04E00000002052433D00002050574D3D00CB\n:00000001FF\n",
+        "nombreHex": "17_estacion_control_arduino.hex",
+        "cpuPausa": false,
+        "pinesDanados": 0,
+        "reg3v3Quemado": false,
+        "motivoReg3v3": ""
+      }
+    },
+    {
+      "tipo": "potenciometro.real",
+      "pos": [
+        -1.4,
+        0,
+        0.75
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Posici\u00F3n del cursor": 55,
+        "Curva logar\u00EDtmica": 0,
+        "Resistencia total": 10000
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "pulsador.real",
+      "pos": [
+        -1.4,
+        0,
+        0.1
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Unidad de tiempo": 0,
+        "Tiempo presionado (seg.)": 0.25,
+        "Presionar cada (segundos)": 4,
+        "Presionar por tiempo (auto)": 1
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -1.45,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 470
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "caja_pantalla.ideal",
+      "pos": [
+        -0.85,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "capacitor_electrolitico.real",
+      "pos": [
+        -0.85,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Capacitancia": 0.002
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.25,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.25,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.14,
+          0.56,
+          1
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.15,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.15,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.12,
+          0.96,
+          0.44
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.55,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.55,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.78,
+          0.12
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.95,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.95,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.14,
+          0.14
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.75,
+        0,
+        0.2
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        1.25,
+        0,
+        0.2
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.76,
+          0.22,
+          1
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.75,
+        0,
+        0.65
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 330
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "transistor_npn.real",
+      "pos": [
+        1.25,
+        0,
+        0.65
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "bateria9v.real",
+      "pos": [
+        1.85,
+        0,
+        0.95
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        1.85,
+        0,
+        0.15
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 22
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "motor.real",
+      "pos": [
+        1.85,
+        0,
+        -0.45
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "lampara.real",
+      "pos": [
+        1.45,
+        0,
+        -0.95
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia nominal": 180,
+        "Potencia nominal": 0.45
+      },
+      "estado": {
+        "colorLuz": [
+          1,
+          0.42,
+          0.62
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X1",
+      "compB": 1,
+      "borneB": "X0",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 1,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X16",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X4",
+      "compB": 2,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X1",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X6",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 3,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "B",
+      "compB": 5,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "A",
+      "compB": 0,
+      "borneB": "X17",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X9",
+      "compB": 6,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "B",
+      "compB": 7,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 7,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X10",
+      "compB": 8,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 8,
+      "borneA": "B",
+      "compB": 9,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 9,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X14",
+      "compB": 10,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 10,
+      "borneA": "B",
+      "compB": 11,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 11,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X15",
+      "compB": 12,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 12,
+      "borneA": "B",
+      "compB": 13,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 13,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X8",
+      "compB": 14,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 14,
+      "borneA": "B",
+      "compB": 15,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 15,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X11",
+      "compB": 16,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 16,
+      "borneA": "B",
+      "compB": 17,
+      "borneB": "X0",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 17,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 17,
+      "borneA": "B",
+      "compB": 18,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 18,
+      "borneA": "A",
+      "compB": 19,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 19,
+      "borneA": "B",
+      "compB": 20,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 20,
+      "borneA": "B",
+      "compB": 17,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 18,
+      "borneA": "A",
+      "compB": 21,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 21,
+      "borneA": "B",
+      "compB": 17,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

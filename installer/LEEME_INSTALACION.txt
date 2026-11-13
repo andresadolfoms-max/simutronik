@@ -1,0 +1,49 @@
+========================================================================
+  SIMUTRONIK 1.1 - GUIA DE INSTALACION EN WINDOWS (64 BITS)
+========================================================================
+
+Este paquete incluye todo lo necesario para instalar y ejecutar
+Simutronik en cualquier PC con Windows 10 u 11 (64 bits), sin necesidad
+de instalar Godot ni el SDK de .NET previamente.
+
+------------------------------------------------------------------------
+OPCION 1 (RECOMENDADA): Instalador clasico de Windows
+------------------------------------------------------------------------
+Archivo: Instalar_Simutronik.exe
+
+1. Copia "Instalar_Simutronik.exe" a la PC destino (o ejecutalo directo).
+2. Hace doble clic y segui el asistente (acepta los Terminos y Licencia
+   de Uso; podes elegir si queres icono en el Escritorio, acceso a
+   Proyectos y si queres copiar los videos de la pantalla de inicio).
+3. El programa se instala por usuario (sin exigir permisos de
+   administrador) y agrega un acceso directo en el Menu Inicio llamado
+   "Simutronik".
+
+------------------------------------------------------------------------
+OPCION 2: Version portable (sin instalar)
+------------------------------------------------------------------------
+Carpeta: Simutronik_Portable\ (o archivo Simutronik_Portable_win64.zip)
+
+1. Copia la carpeta entera "Simutronik_Portable" a cualquier ubicacion
+   de la otra PC (o descomprimi el .zip manteniendo la estructura).
+2. Ejecuta "Simutronik.exe".
+3. NO muevas "Simutronik.exe" suelto sin la subcarpeta
+   "data_ElectricSim_windows_x86_64", ya que ahi estan las librerias
+   .NET de la aplicacion.
+
+------------------------------------------------------------------------
+CONTENIDO INCLUIDO
+------------------------------------------------------------------------
+- Simutronik.exe + data_ElectricSim_windows_x86_64\
+- Proyectos\  (17 circuitos de ejemplo + proyecto Arduino complejo)
+- Sketches\   (programas .c y .hex de prueba para Arduino UNO)
+- ffmpeg.exe  (para grabar videos MP4 desde dentro del simulador)
+- LICENSE.md, LICENCIA_USO.txt y Terminos_y_Licencia_de_Uso_de_Simutronik.pdf
+
+------------------------------------------------------------------------
+LICENCIA Y USO GRATUITO
+------------------------------------------------------------------------
+Simutronik es un proyecto de codigo abierto, 100 % gratuito y para fines
+no comerciales. Autor original: Andres Adolfo Moresco Skupien
+(andresadolfoms@gmail.com).
+

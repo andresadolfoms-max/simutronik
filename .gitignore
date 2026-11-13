@@ -1,0 +1,21 @@
+# Godot: caché de importación y del editor (se regenera solo)
+.godot/
+.mono/
+
+# .NET: productos de compilación
+bin/
+obj/
+
+# IDEs
+.vs/
+.idea/
+*.user
+
+# FFmpeg: binario externo de ~200 MB (incluido en los paquetes de Releases; ver README)
+ffmpeg/
+
+# Salidas empaquetadas pesadas (se suben a GitHub Releases por superar 100 MB)
+*.zip
+Instalar_Simutronik.exe
+Simutronik.exe
+Simutronik_Portable/

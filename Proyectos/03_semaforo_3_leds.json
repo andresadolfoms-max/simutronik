@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "arduino_uno.real",
+      "pos": [
+        0,
+        0,
+        0.45
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Frecuencia del reloj": 16
+      },
+      "estado": {
+        "hex": ":1000000011241FBECFEFD8E0CDBFDEBF08E304B997\n:1000100008E005B909D008D000E105B905D000E233\n:1000200005B902D001D0F4CF2EEF89E698E1215036\n:0800300080409040E1F70895C3\n:00000001FF\n\n",
+        "nombreHex": "semaforo_3leds.hex",
+        "cpuPausa": false,
+        "pinesDanados": 0,
+        "reg3v3Quemado": false,
+        "motivoReg3v3": ""
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.35,
+        0,
+        -0.4
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.35,
+        0,
+        -1
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.95,
+          0.16,
+          0.14
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0,
+        0,
+        -0.4
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0,
+        0,
+        -1
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.88,
+          0.14
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.35,
+        0,
+        -0.4
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.35,
+        0,
+        -1
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.16,
+          0.88,
+          0.28
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "X15",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X14",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "A",
+      "compB": 3,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X13",
+      "compB": 5,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "A",
+      "compB": 5,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

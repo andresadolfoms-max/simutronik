@@ -1,0 +1,26 @@
+Propiedades sacadas de Core/FuenteBase.cs:85-97 en el Paso 1-3 del plan (item B11a).
+
+Motivo: son restos de ANTES del Fix 4. Desde que la resistencia interna
+participa del solver via V_efectivo, la caida real ya esta en
+PinA.Voltage - PinB.Voltage (VoltajeEnBornes). Estas dos propiedades
+calculaban una caida "estimada" en paralelo, y su XML doc afirmaba que
+"el solver trata a la fuente como ideal", que es FALSO desde el Fix 4.
+Peor: PanelInspector.cs:182-185 se lo mostraba al alumno.
+
+Reemplazo: el inspector muestra VoltajeEnBornes (el valor real) y la caida
+real Voltage - VoltajeEnBornes. Ver Paso 1-4.
+
+------------------------------------------------------------------------
+    /// <summary>
+    /// Caida de voltaje que la resistencia interna REAL le comeria a esta
+    /// fuente con la corriente que esta entregando (I·R). Es SOLO informativa:
+    /// el solver trata a la fuente como ideal (no se hunde bajo carga), pero
+    /// este numero muestra cuanto caeria una fuente de verdad. La caida "en
+    /// serio" — que afecte al resto del circuito — llega con el solver MNA.
+    /// </summary>
+    public double CaidaInternaEstimada =>
+        IsBurnt ? 0 : Math.Abs(CorrienteEntregada) * ResistenciaInternaNominal;
+
+    /// <summary>Voltaje que la fuente entregaria en sus bornes si su resistencia interna participara (V − I·R), estimado, nunca menor que 0.</summary>
+    public double VoltajeConCargaEstimado =>
+        Math.Max(0, Math.Abs(Voltage) - CaidaInternaEstimada);

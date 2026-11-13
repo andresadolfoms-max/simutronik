@@ -1,0 +1,34 @@
+Sketches de ejemplo para la placa Arduino UNO de ElectricSim
+=============================================================
+
+Los .hex de esta carpeta se cargan DIRECTO en el juego: click en la
+placa (o el botón "Cargar programa" del inspector) y elegí uno.
+
+  blink_busy.hex    Parpadea D13 cada 100ms (espera activa clásica)
+  millis_blink.hex  Parpadea D13 cada 50ms usando Timer0 + millis()
+  uart_eco.hex      Saluda por el monitor serie y hace eco de lo que escribas
+  adc_print.hex     Lee A0 con el ADC y manda el valor por serie (conectale
+                    un divisor de voltaje a A0 y mirá el número cambiar)
+  pullup_led.hex    D2 en INPUT_PULLUP espejado al LED de D13: conectá una
+                    llave de D2 a GND y prendé el LED apretándola
+  d5_blink.hex      D5 en ALTO fijo + blink en D13 (para el experimento de
+                    quemar un pin: cablea D5 directo a GND y mirá)
+  isa_torture.hex   El auto-test del emulador: si todo anda, los 14 pines
+                    digitales quedan en ALTO
+  parpadeo_500ms.hex
+                    Parpadea D13 (y el LED L) cada 500 ms (0.5 s ON / 0.5 s OFF)
+  leds_alternados_500ms.hex
+                    Alterna dos LEDs entre D12 y D13 cada 500 ms
+  semaforo_3leds.hex
+                    Secuencia tipo semáforo: D11 (1 s) -> D12 (0.5 s) -> D13 (1 s)
+
+Los .c son el código fuente de cada uno. Para recompilarlos (o compilar
+los tuyos) sin el IDE de Arduino:
+
+  avr-gcc -mmcu=atmega328p -DF_CPU=16000000UL -Os -o sketch.elf sketch.c
+  avr-objcopy -O ihex sketch.elf sketch.hex
+
+Con el IDE de Arduino: Programa -> Exportar binario compilado, y usá el
+.hex que aparece en la carpeta del sketch. Todo lo que use pinMode,
+digitalWrite/Read, delay, millis, micros, analogRead, analogWrite,
+Serial y attachInterrupt funciona.

@@ -1,0 +1,30 @@
+Bloque DEMO 4 sacado de Tests/Program.cs:154-173 en el Paso 1-5 del plan.
+Motivo: FormulasCorrienteAlterna.cs pasa a Deprecated/Core/ (item B6a). El
+archivo existia, tenia este test, y NINGUN componente ni el solver lo llamaba:
+era una promesa de reactancia no implementada. Sin sacar este bloque, el
+proyecto de tests no compila.
+Para revivirlo: devolver Deprecated/Core/FormulasCorrienteAlterna.cs a Core/
+y volver a pegar el bloque de abajo en Tests/Program.cs.
+------------------------------------------------------------------------
+// ============================================================
+// DEMO 4: Formulas de AC ya disponibles (el solver de fasores con
+// frecuencia/fase sigue siendo trabajo futuro - la AC de HOY entra
+// por RMS, ver DEMO 10)
+// ============================================================
+Console.WriteLine("\n====================================================");
+Console.WriteLine(" DEMO 4: Formulas de AC (reactancia/impedancia/fase)");
+Console.WriteLine("====================================================\n");
+
+double frecuencia = 50; // Hz, red domiciliaria tipica
+double capacitancia = 0.0001; // 100 microfaradios
+double resistenciaSerieAc = 10; // ohm
+
+double xc = FormulasCorrienteAlterna.ReactanciaCapacitiva(frecuencia, capacitancia);
+double z = FormulasCorrienteAlterna.MagnitudImpedancia(resistenciaSerieAc, xc);
+double fp = FormulasCorrienteAlterna.FactorDePotencia(resistenciaSerieAc, xc);
+
+Console.WriteLine($"f={frecuencia}Hz, C=100uF, R=10ohm  ->  Xc={xc:F3}ohm   Z={z:F3}ohm   cos(phi)={fp:F4}");
+Verificar("la reactancia capacitiva calculada coincide con 1/(2*pi*f*C)", Math.Abs(xc - 31.831) < 0.01);
+Verificar("la impedancia calculada coincide con sqrt(R^2+Xc^2)", Math.Abs(z - 33.365) < 0.01);
+
+

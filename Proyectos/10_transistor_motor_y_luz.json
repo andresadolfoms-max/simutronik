@@ -1,0 +1,310 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "bateria9v.real",
+      "pos": [
+        -1.55,
+        0,
+        0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "pulsador.real",
+      "pos": [
+        -0.75,
+        0,
+        0.65
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Unidad de tiempo": 0,
+        "Tiempo presionado (seg.)": 2.5,
+        "Presionar cada (segundos)": 1.5,
+        "Presionar por tiempo (auto)": 1
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "potenciometro.real",
+      "pos": [
+        -0.05,
+        0,
+        0.65
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Posici\u00F3n del cursor": 80,
+        "Curva logar\u00EDtmica": 0,
+        "Resistencia total": 1000
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.45,
+        0,
+        0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 330
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "transistor_npn.real",
+      "pos": [
+        0.95,
+        0,
+        -0.35
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.15,
+        0,
+        -0.55
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 22
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "motor.real",
+      "pos": [
+        0.85,
+        0,
+        -0.95
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "lampara.real",
+      "pos": [
+        0.05,
+        0,
+        -1.05
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia nominal": 180,
+        "Potencia nominal": 0.45
+      },
+      "estado": {
+        "colorLuz": [
+          1,
+          0.3,
+          0.55
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.65,
+        0,
+        -0.75
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 330
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -1.2,
+        0,
+        -0.75
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.18,
+          1,
+          0.42
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 1,
+      "borneA": "B",
+      "compB": 2,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 3,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "X0",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 5,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "B",
+      "compB": 6,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 7,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 7,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 8,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 8,
+      "borneA": "B",
+      "compB": 9,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 9,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

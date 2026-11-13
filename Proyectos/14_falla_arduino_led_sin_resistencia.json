@@ -1,0 +1,224 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "arduino_uno.real",
+      "pos": [
+        -0.85,
+        0,
+        0.55
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Frecuencia del reloj": 16
+      },
+      "estado": {
+        "hex": ":1000000011241FBE0FEF0DBF08E00EBF00E304B9BF\n:1000100045E000E205B910E10FD0002705B910E175\n:100020000BD04A95B1F700E305B910E105D000E126\n:1000300005B910E101D0F7CF80E69AEE0197F1F70C\n:060040001A95D1F70895A6\n:00000001FF\n",
+        "nombreHex": "falla_led_arduino.hex",
+        "cpuPausa": false,
+        "pinesDanados": 0,
+        "reg3v3Quemado": false,
+        "motivoReg3v3": ""
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.85,
+        0,
+        -0.35
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.85,
+        0,
+        -0.95
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.14,
+          0.96,
+          0.36
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.1,
+        0,
+        -0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 330
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "transistor_npn.real",
+      "pos": [
+        0.75,
+        0,
+        -0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "bateria9v.real",
+      "pos": [
+        1.55,
+        0,
+        0.55
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.85,
+        0,
+        -0.95
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.14,
+          0.12
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "X15",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 1,
+      "borneA": "B",
+      "compB": 2,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X14",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 3,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "X0",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "B",
+      "compB": 5,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "A",
+      "compB": 6,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

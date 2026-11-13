@@ -1,0 +1,189 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "bateriaauto.real",
+      "pos": [
+        -1.7,
+        0,
+        0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -1,
+        0,
+        0.8
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Resistencia": 560
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.3,
+        0,
+        0.8
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.14,
+          0.96,
+          0.36
+        ]
+      }
+    },
+    {
+      "tipo": "interruptor.real",
+      "pos": [
+        -0.85,
+        0,
+        -0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Unidad del temporizador": 0,
+        "Cambiar cada (segundos)": 2.5,
+        "Activar por tiempo (auto)": 1
+      },
+      "estado": {
+        "cerrado": false
+      }
+    },
+    {
+      "tipo": "transformador_ac_dc.v220a12",
+      "pos": [
+        0.15,
+        0,
+        -0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    },
+    {
+      "tipo": "motor.real",
+      "pos": [
+        1.2,
+        0,
+        -0.15
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {}
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 1,
+      "borneA": "B",
+      "compB": 2,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "A",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 3,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "X0",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "X1",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "A",
+      "compB": 5,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 5,
+      "borneA": "B",
+      "compB": 4,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

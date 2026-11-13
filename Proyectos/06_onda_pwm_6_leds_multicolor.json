@@ -1,0 +1,427 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "arduino_uno.real",
+      "pos": [
+        0,
+        0,
+        0.75
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Frecuencia del reloj": 16
+      },
+      "estado": {
+        "hex": ":1000000011241FBE0FEF0DBF08E00EBF08E60AB9AE\n:100010000EE004B903EA04BD03E005BD01EA009364\n:1000200080000BE00093810000270093890000937B\n:100030008B0003EA0093B00004E00093B10020E0DD\n:10004000E4EDF0E0422F4F71E40FF11D3491309355\n:10005000B400E4EDF0E0422F55E0450F4F71E40F9E\n:10006000F11D349138BDE4EDF0E0422F5AE0450F28\n:100070004F71E40FF11D349137BDE4EDF0E0422FF4\n:1000800050E1450F4F71E40FF11D3491309388001A\n:10009000E4EDF0E0422F55E1450F4F71E40FF11D03\n:1000A000349130938A00E4EDF0E0422F5AE1450F9D\n:1000B0004F71E40FF11D34913093B30013E003D07E\n:1000C00023952F71BDCF80E69AEE0197F1F71A952F\n:1000D000D1F7089500000207101E30486484A6C6B8\n:1000E000E2F4FDFFFFFDF4E2C6A6846448301E1072\n:0400F0000702000003\n:00000001FF\n",
+        "nombreHex": "onda_pwm_6_leds.hex",
+        "cpuPausa": false,
+        "pinesDanados": 0,
+        "reg3v3Quemado": false,
+        "motivoReg3v3": ""
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -1.292,
+        0,
+        -0.168
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -1.47,
+        0,
+        -0.472
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.14,
+          0.72
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.889,
+        0,
+        -0.329
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -1.011,
+        0,
+        -0.859
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.58,
+          0.16,
+          1
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.316,
+        0,
+        -0.418
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.36,
+        0,
+        -1.072
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.14,
+          0.45,
+          1
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.316,
+        0,
+        -0.418
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        0.36,
+        0,
+        -1.072
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.1,
+          0.92,
+          0.88
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        0.889,
+        0,
+        -0.329
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        1.011,
+        0,
+        -0.859
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.18,
+          1,
+          0.36
+        ]
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        1.292,
+        0,
+        -0.168
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 150
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        1.47,
+        0,
+        -0.472
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          1,
+          0.86,
+          0.12
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "X5",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X7",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "A",
+      "compB": 3,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 4,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X8",
+      "compB": 5,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "A",
+      "compB": 5,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 6,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X11",
+      "compB": 7,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 8,
+      "borneA": "A",
+      "compB": 7,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 8,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X12",
+      "compB": 9,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 10,
+      "borneA": "A",
+      "compB": 9,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 10,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X13",
+      "compB": 11,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 12,
+      "borneA": "A",
+      "compB": 11,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 12,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

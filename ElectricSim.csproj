@@ -1,0 +1,26 @@
+<Project Sdk="Godot.NET.Sdk/4.7.0">
+  <!--
+    Proyecto principal del juego (lo compila Godot).
+    Si usás OTRA versión de Godot 4.x, cambiá el número de la línea de
+    arriba (y la línea config/features de project.godot) y listo.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>ElectricSim</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- El motor y sus tests se compilan como proyectos propios, no acá. -->
+    <Compile Remove="Core\**" />
+    <Compile Remove="Tests\**" />
+    <!-- Codigo archivado (Aislar-CODIGO). Queda en el repo, fuera del build. -->
+    <Compile Remove="Deprecated\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Core\ElectricSim.Core.csproj" />
+  </ItemGroup>
+</Project>

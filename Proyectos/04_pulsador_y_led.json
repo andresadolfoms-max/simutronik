@@ -1,0 +1,139 @@
+{
+  "version": 2,
+  "componentes": [
+    {
+      "tipo": "arduino_uno.real",
+      "pos": [
+        0,
+        0,
+        0.45
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Frecuencia del reloj": 16
+      },
+      "estado": {
+        "hex": ":100000000C9434000C943E000C943E000C943E0082\n:100010000C943E000C943E000C943E000C943E0068\n:100020000C943E000C943E000C943E000C943E0058\n:100030000C943E000C943E000C943E000C943E0048\n:100040000C943E000C943E000C943E000C943E0038\n:100050000C943E000C943E000C943E000C943E0028\n:100060000C943E000C943E0011241FBECFEFD8E04C\n:10007000DEBFCDBF0E9440000C9449000C940000EC\n:1000800052985A9A259A4A9B02C02D98FCCF2D9AD5\n:06009000FACFF894FFCF47\n:00000001FF\n",
+        "nombreHex": "pullup_led.hex",
+        "cpuPausa": false,
+        "pinesDanados": 0,
+        "reg3v3Quemado": false,
+        "motivoReg3v3": ""
+      }
+    },
+    {
+      "tipo": "resistencia.real",
+      "pos": [
+        -0.25,
+        0,
+        -0.4
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "stats": {
+        "Resistencia": 220
+      },
+      "estado": {}
+    },
+    {
+      "tipo": "led.real",
+      "pos": [
+        -0.25,
+        0,
+        -1
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {},
+      "estado": {
+        "colorLuz": [
+          0.16,
+          0.88,
+          0.28
+        ]
+      }
+    },
+    {
+      "tipo": "pulsador.real",
+      "pos": [
+        0.55,
+        0,
+        -0.4
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "Presionar por tiempo (auto)": 1,
+        "Tiempo presionado (seg.)": 0.6,
+        "Presionar cada (segundos)": 1
+      },
+      "estado": {}
+    }
+  ],
+  "cables": [
+    {
+      "compA": 0,
+      "borneA": "X15",
+      "compB": 1,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "A",
+      "compB": 1,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 2,
+      "borneA": "B",
+      "compB": 0,
+      "borneB": "X22",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X4",
+      "compB": 3,
+      "borneB": "A",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    },
+    {
+      "compA": 0,
+      "borneA": "X22",
+      "compB": 3,
+      "borneB": "B",
+      "fisico": false,
+      "comba": 0.035,
+      "grosor": 0.015
+    }
+  ],
+  "extras": {
+    "mundo": {
+      "ticksPorSegundo": 30,
+      "temperaturaAmbiente": 22
+    }
+  }
+}

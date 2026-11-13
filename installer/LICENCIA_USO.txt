@@ -1,0 +1,65 @@
+TERMINOS DE USO, LICENCIA Y MANIFIESTO DE SIMUTRONIK
+====================================================
+
+Ultima actualizacion: Noviembre de 2026
+Autor / Creador original: Andres Adolfo Moresco Skupien
+Contacto oficial: andresadolfoms@gmail.com
+
+1. FILOSOFIA DEL PROYECTO: ABIERTO Y PARA TODOS
+Simutronik es una aplicacion de codigo disponible/abierto, completamente gratuita
+y accesible para cualquier persona en el mundo, sin barreras de entrada ni costos
+ocultos. El objetivo principal del proyecto es fomentar el aprendizaje, la
+experimentacion y la creacion libre.
+
+2. LIBERTADES DE USO, MODIFICACION Y COLABORACION
+Cualquier usuario, estudiante, entusiasta o desarrollador tiene la libertad de:
+- Usar y estudiar: Descargar, ejecutar y analizar el codigo fuente de Simutronik
+  para cualquier proposito personal, educativo o de investigacion.
+- Crear extensiones y mejoras: Desarrollar complementos, modulos, plantillas,
+  modificaciones (forks) o mejoras sobre la aplicacion base.
+- Colaborar y comunicarse: Ponerse en contacto con el autor original para
+  proponer nuevas funcionalidades, reportar errores, compartir extensiones
+  creadas o contribuir directamente al desarrollo del proyecto oficial.
+
+3. PROHIBICION ESTRICTA DE USO COMERCIAL Y LUCRO
+Para proteger la esencia comunitaria y gratuita del proyecto, se establecen las
+siguientes reglas de cumplimiento obligatorio:
+- Gratuidad absoluta: Todo lo relacionado con Simutronik —incluyendo la
+  aplicacion principal, versiones modificadas, extensiones, complementos,
+  paquetes de recursos o derivados— debe distribuirse de forma 100 % gratuita.
+- Prohibicion de venta y beneficio economico: Queda terminantemente prohibido
+  que cualquier persona fisica, empresa, institucion u organizacion utilice
+  Simutronik (total o parcialmente) con fines de lucro o para obtener un
+  beneficio economico directo o indirecto.
+- Ejemplos de usos prohibidos (no limitativos):
+  * Vender copias de Simutronik o cobrar por su descarga o acceso.
+  * Crear y comercializar versiones derivadas o modificadas (por ejemplo,
+    vender una "Version Pro", "Simutronik X" o ediciones personalizadas).
+  * Vender extensiones, plugins o complementos disenados para funcionar con
+    Simutronik.
+  * Integrar Simutronik dentro de un producto, plataforma o servicio comercial
+    de pago.
+
+4. CONDICION DE RECIPROCIDAD (COMPARTIR IGUAL)
+Si decides modificar Simutronik o crear una extension y distribuirla
+publicamente, debes hacerlo manteniendo exactamente estas mismas condiciones:
+el codigo debe permanecer abierto y su acceso debe ser completamente gratuito
+para toda la comunidad, otorgando el debido reconocimiento al proyecto original.
+
+5. PROTECCION DE IDENTIDAD Y VERSIONES OFICIALES
+Las versiones modificadas por terceros deben indicar claramente que son
+derivadas o no oficiales, evitando utilizar el nombre Simutronik de manera que
+pueda confundir a los usuarios haciendoles creer que se trata de un lanzamiento
+oficial del autor original.
+
+6. EXENCION DE RESPONSABILIDAD
+Simutronik se proporciona "tal cual" (as is), sin garantias de ningun tipo, ya
+sean expresas o implicitas. El autor original no se hace responsable por fallos
+tecnicos, perdida de datos, danos directos o indirectos, ni por el uso indebido
+que terceros puedan hacer de la aplicacion o de sus extensiones creadas por la
+comunidad.
+
+--------------------------------------------------------------------------------
+Al descargar, utilizar, modificar o desarrollar extensiones para Simutronik,
+aceptas automaticamente los terminos establecidos en este documento.
+

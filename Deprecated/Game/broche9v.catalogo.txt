@@ -1,0 +1,38 @@
+Bloque 'broche9v' sacado de Game/CatalogoComponentes.cs en el Paso 3-3 del plan.
+
+Motivo (Aislar-CODIGO): "Broche 9V" y "Enchufe macho" son dos variantes de
+Conductor con otro modelo 3D. La mecanica de ENCASTRE esta declarada "en el
+PLAN" y no existe: hoy son un cable que ocupa lugar en la paleta y confunde
+al alumno, que espera que el broche se enchufe a la bateria.
+
+La clase Core/Components/Conductor.cs SE QUEDA: la usan aro, marco y cubo.
+Lo unico que sale es esta entrada del catalogo.
+
+Para revivirlo: volver a pegar el bloque en CatalogoComponentes.Crear(),
+justo despues de lista.Add(toma).
+
+Ojo: los proyectos guardados que tengan un 'broche9v' van a abrir con el
+aviso de tipos faltantes del Paso 1-1.
+------------------------------------------------------------------------
+        var broche = new DefinicionTipo
+        {
+            Id = "broche9v",
+            Nombre = "Broche 9V / Enchufe",
+            Categoria = CategoriaComponente.Control,
+            Descripcion = "Los adaptadores (el broche de la 9V, el enchufe macho): por ahora son un conductor perfecto colocable — la mecánica de 'encastrar' una cosa en la otra está en el PLAN.",
+            CrearPrimitiva = Primitivas.Broche9V,
+            AlturaObjetivo = 0.12f,
+            AnclaBorneA = new Vector3(-0.4f, 0.5f, 0f),
+            AnclaBorneB = new Vector3(0.4f, 0.5f, 0f),
+        };
+        broche.Stats.Add(new StatDef("Resistencia", "Ω", 0.001, 1000, 0.01,
+            c => ((Conductor)c).Resistencia, (c, v) => ((Conductor)c).Resistencia = v)
+        { Descripcion = "Casi nada: es un pedazo de metal con forma." });
+        broche.Lecturas.Add(new LecturaDef("Estado", c => c.IsBurnt ? "☠ derretido" : "íntegro"));
+        broche.Variantes.Add(Variante("broche", "Broche 9V",
+            "El conector de la batería de 9V.",
+            () => new Conductor("Broche 9V")));
+        broche.Variantes.Add(Variante("enchufe", "Enchufe macho",
+            "El de la punta del cable.",
+            () => new Conductor("Enchufe")));
+        lista.Add(broche);

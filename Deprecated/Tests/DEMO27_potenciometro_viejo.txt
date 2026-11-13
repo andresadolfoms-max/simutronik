@@ -1,0 +1,51 @@
+Bloque DEMO 27 sacado de Tests/Program.cs en el Paso 8-1 del plan.
+
+Motivo: probaba el potenciometro VIEJO, que tenia DOS bornes — o sea que era
+un reostato, y encima duplicado con Reostato.cs. Las propiedades que asertaba
+(ResistenciaActual, ResistenciaMaxima, ResistenciaMinima) ya no existen: el
+potenciometro nuevo tiene tres bornes, ResistenciaTotal y dos tramos.
+
+Lo reemplaza el DEMO 70, que ademas prueba lo que antes era IMPOSIBLE: el
+divisor de tension.
+
+El potenciometro viejo esta en Deprecated/Core/Potenciometro.cs.
+------------------------------------------------------------------------
+// ============================================================
+// DEMO 27: POTENCIOMETRO (el "dimmer" de perilla).
+//   Girar la ruedita cambia la resistencia (escala logaritmica,
+//   como los reales) y con ella cuanta energia llega a la lampara.
+// ============================================================
+Console.WriteLine("\n====================================================");
+Console.WriteLine(" DEMO 27: Potenciometro - la perilla que regula la energia");
+Console.WriteLine("====================================================\n");
+
+var graph27 = new CircuitGraph();
+var bat27 = new Battery("B27", 9);
+var pote27 = new Potenciometro("Perilla", resistenciaMaxima: 10_000);
+var lamp27 = new Lampara("Lamparita", 60) { PotenciaNominal = 1.4 }; // nominal acorde a 9V: full perilla = full brillo
+graph27.Agregar(bat27);
+graph27.Agregar(pote27);
+graph27.Agregar(lamp27);
+graph27.Conectar(bat27.PinA, pote27.PinA);
+graph27.Conectar(pote27.PinB, lamp27.PinA);
+graph27.Conectar(lamp27.PinB, bat27.PinB);
+
+double BrilloConPerilla(double perilla)
+{
+    pote27.Perilla = perilla;
+    for (int t = 0; t < 8; t++) graph27.Tick(0.1);
+    return lamp27.Brillo;
+}
+double apagado27 = BrilloConPerilla(0);
+double medio27 = BrilloConPerilla(65);
+double fondo27 = BrilloConPerilla(100);
+Console.WriteLine($"Perilla 0%: brillo={apagado27:P0} (R={pote27.ResistenciaMaxima:F0}ohm de freno)");
+Console.WriteLine($"Perilla 65%: brillo={medio27:P0}");
+Console.WriteLine($"Perilla 100%: brillo={fondo27:P0} (R~{pote27.ResistenciaMinima}ohm: via libre)");
+Verificar("perilla a cero: la lampara queda apagada", apagado27 < 0.02);
+// Con la R_int de la fuente en el lazo, la perilla a fondo no llega al
+// 100%: la fuente se hunde un poco bajo carga, como una pila real.
+Verificar("perilla al fondo: brillo al maximo que el circuito permite", fondo27 > 0.85);
+Verificar("la perilla gradua de verdad (0 < medio < fondo)", medio27 > apagado27 + 0.05 && medio27 < fondo27 - 0.05);
+
+

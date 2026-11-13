@@ -1,0 +1,59 @@
+Bloque DEMO 29 sacado de Tests/Program.cs en el Paso 5-2 del plan.
+
+Motivo: probaba el inductor VIEJO, que era una rampa de resistencia con un
+`SegundosEstablecimiento` puesto a mano. Ese parametro ya no existe: el
+inductor nuevo tiene Inductancia (H) y su constante de tiempo sale del
+circuito (tau = L/R). Los assertions de aca median el comportamiento
+incorrecto, asi que no se pueden "actualizar": se reemplazan por el DEMO 68.
+
+El inductor viejo esta en Deprecated/Core/Inductor.cs.
+------------------------------------------------------------------------
+// ============================================================
+Console.WriteLine("\n====================================================");
+Console.WriteLine(" DEMO 29: Inductor - bloquea al principio, conduce despues");
+Console.WriteLine("====================================================\n");
+
+var graph29 = new CircuitGraph();
+var bat29 = new Battery("B29", 9);
+var inductor29 = new Inductor("Bobina", segundosEstablecimiento: 0.8);
+var lamp29 = new Lampara("LampFade", 60) { PotenciaNominal = 1.4 };
+graph29.Agregar(bat29);
+graph29.Agregar(inductor29);
+graph29.Agregar(lamp29);
+graph29.Conectar(bat29.PinA, inductor29.PinA);
+graph29.Conectar(inductor29.PinB, lamp29.PinA);
+graph29.Conectar(lamp29.PinB, bat29.PinB);
+
+graph29.Tick(0.1);
+double brilloInicio29 = lamp29.Brillo;
+for (int t = 0; t < 15; t++) graph29.Tick(0.1);
+double brilloFinal29 = lamp29.Brillo;
+Console.WriteLine($"Al primer tick: brillo={brilloInicio29:P0} flujo={inductor29.NivelFlujo:P0} | Tras 1.6s: brillo={brilloFinal29:P0} flujo={inductor29.NivelFlujo:P0}");
+Verificar("al principio la bobina FRENA (lampara apagada o casi)", brilloInicio29 < 0.15);
+Verificar("con el campo formado, via libre (brillo alto)", brilloFinal29 > 0.85);
+
+// Al abrir el circuito el campo colapsa: si se vuelve a cerrar, el fade arranca de nuevo.
+var graph29b = new CircuitGraph();
+var bat29b = new Battery("B29b", 9);
+var llave29b = new Switch("Llave", startClosed: true);
+var inductor29b = new Inductor("Bobina2", segundosEstablecimiento: 0.5);
+// OJO: la R en serie no es decorativa. Una bobina con el campo formado es
+// casi un CABLE — sola contra la bateria, es un cortocircuito de manual
+// (nos paso al escribir este test: la fuente moria en el tick 11).
+var rSerie29 = new Resistor("R_serie", 40);
+graph29b.Agregar(bat29b);
+graph29b.Agregar(llave29b);
+graph29b.Agregar(rSerie29);
+graph29b.Agregar(inductor29b);
+graph29b.Conectar(bat29b.PinA, llave29b.PinA);
+graph29b.Conectar(llave29b.PinB, rSerie29.PinA);
+graph29b.Conectar(rSerie29.PinB, inductor29b.PinA);
+graph29b.Conectar(inductor29b.PinB, bat29b.PinB);
+for (int t = 0; t < 12; t++) graph29b.Tick(0.1);
+double flujoAntes29 = inductor29b.NivelFlujo;
+llave29b.IsClosed = false;
+for (int t = 0; t < 6; t++) graph29b.Tick(0.1);
+Console.WriteLine($"Flujo con llave cerrada: {flujoAntes29:P0} -> tras abrir 0.6s: {inductor29b.NivelFlujo:P0}");
+Verificar("al abrir el circuito, el campo colapsa", flujoAntes29 > 0.9 && inductor29b.NivelFlujo < 0.1);
+
+

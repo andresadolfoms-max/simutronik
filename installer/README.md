@@ -1,25 +1,31 @@
-# Instalador y Distribución de Simutronik (Windows 64 bits)
+# Instaladores y Distribución de Simutronik (Windows y Linux x64)
 
-Esta carpeta contiene todo lo necesario para **generar el instalador oficial de Windows (`Instalar_Simutronik.exe`)** y distribuir Simutronik en cualquier PC con Windows 10 u 11 (64 bits), sin exigir que el usuario final instale Godot ni .NET.
+Esta carpeta contiene todo lo necesario para generar los paquetes oficiales de **Windows 64 bits** (`Instalar_Simutronik.exe` + portable `.zip`) y **Linux 64 bits** (`Instalar_Simutronik_Linux_x64.run` + portable `.tar.gz`), sin exigir que el usuario final instale Godot ni .NET.
 
-## Descargar el instalador ya compilado
+## Descargar los instaladores ya compilados
 
-Los archivos binarios listos para instalar (`Instalar_Simutronik.exe` y `Simutronik_Portable_win64.zip`) superan el límite por archivo de Git (100 MB), por lo que se publican en la pestaña **Releases** del repositorio en GitHub:
+Los ejecutables compilados (`> 100 MB`) se alojan en la pestaña [**Releases**](https://github.com/andresadolfoms-max/simutronik/releases) del repositorio en GitHub:
 
-1. Entrá a [**Releases**](https://github.com/andresadolfoms-max/simutronik/releases) en este repositorio.
-2. Descargá `Instalar_Simutronik.exe` (asistente de instalación en español, recomendado) **o** `Simutronik_Portable_win64.zip` (carpeta autocontenida sin instalación).
-3. Ver instrucciones detalladas en [`LEEME_INSTALACION.txt`](LEEME_INSTALACION.txt) — incluido también dentro de los paquetes distribuibles.
+### Windows (10 / 11 x64)
+- **`Instalar_Simutronik.exe`** *(recomendado)*: asistente de instalación en español con accesos directos.
+- **`Simutronik_Portable_win64.zip`**: carpeta autocontenida sin instalación.
+- Guía detallada: [`LEEME_INSTALACION.txt`](LEEME_INSTALACION.txt).
 
-## Cómo compilar el instalador desde el código fuente
+### Linux (Ubuntu, Debian, Mint, Fedora, Arch, etc. — x86_64)
+- **`Instalar_Simutronik_Linux_x64.run`** *(recomendado)*: instalador autoextraíble en un solo archivo (`chmod +x Instalar_Simutronik_Linux_x64.run && ./Instalar_Simutronik_Linux_x64.run`). Instala en `~/.local/opt/simutronik` sin requerir `root` (o en `/opt/simutronik` con `sudo`), agrega entrada al menú de aplicaciones, ícono, comando `simutronik` y script `desinstalar.sh`.
+- **`Simutronik_Linux_x64.tar.gz`**: paquete portable + script [`linux/instalar.sh`](linux/instalar.sh). Descomprimí y ejecutá `./Simutronik.x86_64` o `./instalar.sh`.
+- Guía detallada: [`linux/LEEME_LINUX.txt`](linux/LEEME_LINUX.txt).
+
+## Cómo compilar los instaladores desde el código fuente
 
 Requisitos:
-- **Godot 4.7 (.NET)** con *Export Templates* de Windows x64 instalados.
-- **Inno Setup 6** (`ISCC.exe`).
-- **(Opcional)** `ffmpeg.exe` en `ffmpeg/ffmpeg.exe` para que el instalador y la versión portable incluyan el grabador de videos MP4.
+- **Godot 4.7 (.NET)** con *Export Templates* de Windows x64 y Linux x64 instalados.
+- **Inno Setup 6** (`ISCC.exe`) para generar `Instalar_Simutronik.exe`.
+- *(Opcional en Windows)* `ffmpeg.exe` en `ffmpeg/ffmpeg.exe` para incluir el grabador MP4 (en Linux Simutronik detecta automáticamente `ffmpeg` en el `PATH` del sistema o junto al binario).
 
 Pasos resumidos:
-1. Exportar el proyecto desde Godot (`export_presets.cfg`, preset `Windows Desktop`) hacia `c:\Dev\Instalador_Simutronik\Simutronik_Portable\Simutronik.exe`.
-2. Copiar `Proyectos\`, `Sketches\`, `ffmpeg.exe` (si está disponible), `LICENSE.md`, `installer\LICENCIA_USO.txt` y `docs\Terminos_y_Licencia_de_Uso_de_Simutronik.pdf` dentro de `Simutronik_Portable\`.
-3. Compilar `installer/Simutronik.iss` con Inno Setup (`ISCC.exe installer\Simutronik.iss`) para generar `Instalar_Simutronik.exe`.
+1. Exportar desde Godot usando `export_presets.cfg`:
+   - Preset `Windows Desktop` → `Simutronik.exe` + compilar `installer/Simutronik.iss` con Inno Setup (`ISCC.exe installer\Simutronik.iss`).
+   - Preset `Linux` → `Simutronik.x86_64` + incluir `data_ElectricSim_linuxbsd_x86_64/`, `Proyectos/`, `Sketches/`, licencias, íconos y [`linux/instalar.sh`](linux/instalar.sh) en `.tar.gz` / `.run` con permisos `0755` y fin de línea LF.
 
 > Sujeto a los [Términos de Uso, Licencia y Manifiesto de Simutronik](../LICENSE.md) — distribución 100 % gratuita y no comercial.

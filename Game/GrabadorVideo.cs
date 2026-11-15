@@ -436,26 +436,60 @@ public partial class GrabadorVideo : Node
     //  FFmpeg: resolución de ruta
     // =====================================================================
 
+    internal static string NombreEjecutableFfmpeg =>
+        OperatingSystem.IsWindows() ? "ffmpeg.exe" : "ffmpeg";
+
     internal static string? ResolverRutaFfmpeg()
     {
-        string juntoAlExe = Path.Combine(DirectorioDelEjecutable(), "ffmpeg.exe");
+        string nombreBin = NombreEjecutableFfmpeg;
+
+        string juntoAlExe = Path.Combine(DirectorioDelEjecutable(), nombreBin);
         if (File.Exists(juntoAlExe)) return juntoAlExe;
 
-        string enProyecto = ProjectSettings.GlobalizePath(FfmpegEnProyecto);
+        string enProyecto = ProjectSettings.GlobalizePath($"res://ffmpeg/{nombreBin}");
         if (File.Exists(enProyecto)) return enProyecto;
+
+        if (OperatingSystem.IsWindows())
+        {
+            string enProyectoWin = ProjectSettings.GlobalizePath(FfmpegEnProyecto);
+            if (File.Exists(enProyectoWin)) return enProyectoWin;
+        }
+
+        string? pathEnv = System.Environment.GetEnvironmentVariable("PATH");
+        if (!string.IsNullOrEmpty(pathEnv))
+        {
+            foreach (string dir in pathEnv.Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries))
+            {
+                try
+                {
+                    string candidato = Path.Combine(dir.Trim(), nombreBin);
+                    if (File.Exists(candidato)) return candidato;
+                }
+                catch
+                {
+                    // Ignorar rutas inválidas dentro de PATH.
+                }
+            }
+        }
 
         return null;
     }
 
     private void AvisarFaltaFfmpeg()
     {
+        string nombreBin = NombreEjecutableFfmpeg;
+        string ayuda = OperatingSystem.IsWindows()
+            ? $"Copie {nombreBin} en cualquiera de estas ubicaciones e inténtelo nuevamente."
+            : $"Instale FFmpeg desde su distribución (ej.: sudo apt install ffmpeg / sudo pacman -S ffmpeg)\n" +
+              $"o copie el binario \"{nombreBin}\" en cualquiera de estas ubicaciones e inténtelo nuevamente.";
+
         MostrarCartel("Falta FFmpeg",
-            "No se encontró ffmpeg.exe en las rutas esperadas:\n\n" +
-            $"1) {Path.Combine(DirectorioDelEjecutable(), "ffmpeg.exe")}\n" +
+            $"No se encontró {nombreBin} en las rutas esperadas ni en el PATH del sistema:\n\n" +
+            $"1) {Path.Combine(DirectorioDelEjecutable(), nombreBin)}\n" +
             "   (junto al ejecutable)\n\n" +
-            $"2) {ProjectSettings.GlobalizePath(FfmpegEnProyecto)}\n" +
+            $"2) {ProjectSettings.GlobalizePath($"res://ffmpeg/{nombreBin}")}\n" +
             "   (dentro del proyecto)\n\n" +
-            "Copie ffmpeg.exe en cualquiera de estas ubicaciones e inténtelo nuevamente.");
+            ayuda);
     }
 
     private static string DirectorioDelEjecutable() =>

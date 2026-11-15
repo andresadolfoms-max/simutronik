@@ -3,8 +3,8 @@
 [Setup]
 AppId={{8D6B4A2E-1C5B-4B9E-9A2F-4E7C1F8B9011}
 AppName=Simutronik
-AppVersion=1.1.0
-AppVerName=Simutronik 1.1
+AppVersion=1.2.0
+AppVerName=Simutronik 1.2
 AppPublisher=Andrés Adolfo Moresco Skupieñ
 DefaultDirName={autopf}\Simutronik
 DefaultGroupName=Simutronik

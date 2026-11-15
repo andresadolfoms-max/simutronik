@@ -4,15 +4,19 @@ Simulador electrónico 3D interactivo y educativo desarrollado en **Godot 4.7 (.
 
 ---
 
-## Instalación rápida (Windows 64 bits)
+## Instalación rápida (Windows y Linux 64 bits)
 
-Si solo querés usar Simutronik en cualquier PC con Windows 10 u 11 (x64) **sin instalar Godot ni el SDK de .NET**:
+Si solo querés usar Simutronik en cualquier PC con **Windows 10/11 (x64)** o **Linux (x86_64)** **sin instalar Godot ni el SDK de .NET**:
 
 1. Abrí la sección [**Releases**](https://github.com/andresadolfoms-max/simutronik/releases) de este repositorio.
-2. Descargá una de las dos opciones:
-   - **`Instalar_Simutronik.exe`** *(recomendado)*: asistente de instalación en español con accesos directos, proyectos listos, sketches Arduino y licencia incluida.
-   - **`Simutronik_Portable_win64.zip`**: carpeta autocontenida; descomprimí y ejecutá `Simutronik.exe`.
-3. Consultá [installer/README.md](installer/README.md) o [installer/LEEME_INSTALACION.txt](installer/LEEME_INSTALACION.txt) para ver la guía completa.
+2. Descargá el paquete para tu sistema operativo:
+   - **Windows x64:**
+     - **`Instalar_Simutronik.exe`** *(recomendado)*: asistente de instalación en español con accesos directos, proyectos listos, sketches Arduino y licencia incluida.
+     - **`Simutronik_Portable_win64.zip`**: carpeta autocontenida; descomprimí y ejecutá `Simutronik.exe`.
+   - **Linux x86_64 (Ubuntu, Debian, Mint, Fedora, Arch, etc.):**
+     - **`Instalar_Simutronik_Linux_x64.run`** *(recomendado)*: instalador en un solo archivo (`chmod +x Instalar_Simutronik_Linux_x64.run && ./Instalar_Simutronik_Linux_x64.run`); agrega acceso directo al menú de aplicaciones, comando `simutronik`, proyectos, sketches y desinstalador.
+     - **`Simutronik_Linux_x64.tar.gz`**: paquete portable; descomprimí (`tar -xzf Simutronik_Linux_x64.tar.gz`) y ejecutá `./Simutronik.x86_64` o `./instalar.sh`.
+3. Consultá [installer/README.md](installer/README.md), [installer/LEEME_INSTALACION.txt](installer/LEEME_INSTALACION.txt) o [installer/linux/LEEME_LINUX.txt](installer/linux/LEEME_LINUX.txt).
 
 > Los ejecutables compilados (`> 100 MB`) se alojan en **GitHub Releases** para mantener limpio el código fuente del repositorio Git.
 
@@ -25,9 +29,9 @@ Si solo querés usar Simutronik en cualquier PC con Windows 10 u 11 (x64) **sin 
   - Emulación ciclo a ciclo del microcontrolador **ATmega328P** para **Arduino UNO** (`Core/Arduino/`: `Atmega328P.cs`, `AvrTimer.cs`, `IntelHexParser.cs`).
   - Componentes en `Core/Components/`: resistencias, potenciómetros, capacitores (no polarizado y electrolítico), inductores, diodos, LEDs, lámparas incandescentes, motores DC con fuerza contraelectromotriz y giro visual, transistores NPN/PNP, temporizador **NE555**, disyuntor rearmable, fusible, interruptores, pulsadores, transformador AC→DC, inversor DC→AC, caja con pantalla y cables resistivos.
 - **`Game/` y `scenes/`**: Capa visual 3D en Godot, cámara orbital, paleta de componentes, tendido de cables, pantalla de inicio con demos en video y **Panel Inspector** (`Game/UI/PanelInspector.cs`) con configuración eléctrica simplificada (voltaje/amperaje mínimo y máximo, **watts mínimos calculados automáticamente** y watts máximos antes de quemarse; exceptuando Arduino UNO).
-- **`Proyectos/`**: 17 circuitos `.json` listos para cargar desde la aplicación, incluyendo casos funcionales, comparativas AC/DC, fallas destructivas, un proyecto complejo con Arduino UNO y su código fuente `.ino` + firmware `.hex` (`Proyectos/17_estacion_control_arduino/`).
+- **`Proyectos/`**: 25 circuitos `.json` listos para cargar desde la aplicación, incluyendo casos funcionales, comparativas AC/DC, fallas destructivas, estación de control con Arduino UNO (`.ino` + `.hex` en `Proyectos/17_estacion_control_arduino/`) y **8 puertas lógicas reales + semisumador binario (`18`–`25`)**.
 - **`Sketches/`**: Colección de programas `.c` y binarios `.hex` listos para cargar en placas Arduino UNO dentro del simulador.
-- **`installer/`**: Script de Inno Setup 6 (`Simutronik.iss`), licencia en texto plano (`LICENCIA_USO.txt`) y guía de empaquetado para generar `Instalar_Simutronik.exe`.
+- **`installer/`**: Script de Inno Setup 6 (`Simutronik.iss`), instalador de Linux (`linux/instalar.sh`, `linux/LEEME_LINUX.txt`), licencia en texto plano (`LICENCIA_USO.txt`) y guía multiplataforma.
 - **`docs/`**: Documentación técnica (`ARQUITECTURA.md`, `PLAN.md`) y copia del documento oficial [`Terminos_y_Licencia_de_Uso_de_Simutronik.pdf`](docs/Terminos_y_Licencia_de_Uso_de_Simutronik.pdf).
 - **`Tests/`**: Suite de pruebas unitarias y de integración en consola (82 bloques de demostración/verificación).
 

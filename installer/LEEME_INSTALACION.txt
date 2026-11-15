@@ -1,5 +1,5 @@
 ========================================================================
-  SIMUTRONIK 1.1 - GUIA DE INSTALACION EN WINDOWS (64 BITS)
+  SIMUTRONIK 1.2 - GUIA DE INSTALACION EN WINDOWS (64 BITS)
 ========================================================================
 
 Este paquete incluye todo lo necesario para instalar y ejecutar
@@ -35,7 +35,7 @@ Carpeta: Simutronik_Portable\ (o archivo Simutronik_Portable_win64.zip)
 CONTENIDO INCLUIDO
 ------------------------------------------------------------------------
 - Simutronik.exe + data_ElectricSim_windows_x86_64\
-- Proyectos\  (17 circuitos de ejemplo + proyecto Arduino complejo)
+- Proyectos\  (25 circuitos de ejemplo: Arduino UNO + puertas logicas reales)
 - Sketches\   (programas .c y .hex de prueba para Arduino UNO)
 - ffmpeg.exe  (para grabar videos MP4 desde dentro del simulador)
 - LICENSE.md, LICENCIA_USO.txt y Terminos_y_Licencia_de_Uso_de_Simutronik.pdf

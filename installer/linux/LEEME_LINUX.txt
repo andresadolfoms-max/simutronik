@@ -1,0 +1,78 @@
+========================================================================
+  SIMUTRONIK 1.2 - GUIA DE INSTALACION EN LINUX (x86_64 / 64 BITS)
+========================================================================
+
+Este paquete permite instalar o ejecutar Simutronik en cualquier
+distribucion moderna de Linux de 64 bits (Ubuntu, Debian, Linux Mint,
+Fedora, Arch, Manjaro, openSUSE, Pop!_OS, etc.), SIN necesidad de
+instalar Godot ni el SDK de .NET previamente.
+
+------------------------------------------------------------------------
+OPCION 1 (RECOMENDADA): Instalador en un solo archivo (.run)
+------------------------------------------------------------------------
+Archivo: Instalar_Simutronik_Linux_x64.run
+
+1. Dale permisos de ejecucion y ejecutalo desde la terminal:
+
+     chmod +x Instalar_Simutronik_Linux_x64.run
+     ./Instalar_Simutronik_Linux_x64.run
+
+2. Por defecto instala para tu usuario en ~/.local/opt/simutronik
+   (sin pedir contraseña root), agrega 'Simutronik' al menu de
+   aplicaciones, crea acceso en el Escritorio (si aplica), copia los
+   videos de demostracion y registra el comando 'simutronik'.
+3. Si preferis instalarlo para todos los usuarios en /opt/simutronik:
+
+     sudo ./Instalar_Simutronik_Linux_x64.run
+
+   Para desinstalar en cualquier momento:
+     ~/.local/opt/simutronik/desinstalar.sh  (o sudo /opt/simutronik/desinstalar.sh)
+
+------------------------------------------------------------------------
+OPCION 2: Paquete portable / instalador manual (.tar.gz)
+------------------------------------------------------------------------
+Archivo: Simutronik_Linux_x64.tar.gz
+
+1. Descomprimi el archivo:
+
+     tar -xzf Simutronik_Linux_x64.tar.gz
+     cd Simutronik_Linux
+
+2. Podes ejecutar Simutronik directamente en modo portable:
+
+     ./Simutronik.x86_64
+
+   O correr el instalador para integrarlo al menu del sistema:
+
+     ./instalar.sh
+
+IMPORTANTE: Si usas el modo portable, mantené SIEMPRE la carpeta
+"data_ElectricSim_linuxbsd_x86_64" junto al binario "Simutronik.x86_64".
+
+------------------------------------------------------------------------
+REQUISITOS DEL SISTEMA Y FFmpeg OPCIONAL
+------------------------------------------------------------------------
+- Arquitectura x86_64 (64 bits) con soporte OpenGL 3.3 / GLES3
+  (X11 o Wayland).
+- Grabacion de videos MP4/GIF (opcional): Simutronik detecta
+  automaticamente 'ffmpeg' en el PATH del sistema o junto al ejecutable:
+    Ubuntu / Debian / Mint: sudo apt install ffmpeg
+    Fedora:                 sudo dnf install ffmpeg
+    Arch / Manjaro:         sudo pacman -S ffmpeg
+
+------------------------------------------------------------------------
+CONTENIDO INCLUIDO
+------------------------------------------------------------------------
+- Simutronik.x86_64 + data_ElectricSim_linuxbsd_x86_64/
+- Proyectos/  (25 circuitos listos: Arduino UNO + puertas logicas reales)
+- Sketches/   (programas .c y .hex de prueba para Arduino UNO)
+- videos_inicio/ (.ogv de demostracion para el menu de inicio)
+- LICENSE.md, LICENCIA_USO.txt y Terminos_y_Licencia_de_Uso_de_Simutronik.pdf
+
+------------------------------------------------------------------------
+LICENCIA Y USO GRATUITO
+------------------------------------------------------------------------
+Simutronik es un proyecto de codigo abierto, 100 % gratuito y para fines
+no comerciales. Autor original: Andres Adolfo Moresco Skupien
+(andresadolfoms@gmail.com).
+========================================================================

@@ -16,6 +16,13 @@ ffmpeg/
 
 # Salidas empaquetadas pesadas (se suben a GitHub Releases por superar 100 MB)
 *.zip
+*.tar.gz
+*.run
 Instalar_Simutronik.exe
+Instalar_Simutronik_Linux_x64.run
 Simutronik.exe
+Simutronik.x86_64
 Simutronik_Portable/
+Simutronik_Linux/
+data_ElectricSim_linuxbsd_x86_64/
+data_ElectricSim_windows_x86_64/

@@ -153,7 +153,7 @@ public partial class PantallaInicio : CanvasLayer
             "FORMATOS COMPATIBLES\n" +
             " - .ogv (Ogg Theora): reproducción directa (formato nativo de video en Godot).\n" +
             " - MP4, MOV, MKV, WEBM, AVI, etc.: se convierten automáticamente a .ogv la primera\n" +
-            "   vez mediante ffmpeg.exe (el mismo codificador del grabador de video). Los videos MP4\n" +
+            $"   vez mediante {GrabadorVideo.NombreEjecutableFfmpeg} (el mismo codificador del grabador de video). Los videos MP4\n" +
             "   exportados por el simulador pueden copiarse directamente en esta carpeta.\n\n" +
             "CONVERSIÓN MANUAL OPCIONAL:\n" +
             "   ffmpeg -i entrada.mp4 -an -c:v libtheora -q:v 7 -g 1 -pix_fmt yuv420p -r 30 salida.ogv\n\n" +
@@ -297,7 +297,7 @@ public partial class PantallaInicio : CanvasLayer
         _pidConversion = OS.CreateProcess(ffmpeg, argumentos);
         if (_pidConversion == -1)
         {
-            TerminarConversion(false, "No se pudo ejecutar ffmpeg.exe.");
+            TerminarConversion(false, $"No se pudo ejecutar {GrabadorVideo.NombreEjecutableFfmpeg}.");
             return;
         }
         ActualizarAviso();
@@ -329,7 +329,7 @@ public partial class PantallaInicio : CanvasLayer
             if (existe) DirAccess.RemoveAbsolute(ProjectSettings.GlobalizePath(parte));
             TerminarConversion(false,
                 $"No se pudo convertir \"{System.IO.Path.GetFileName(_origenActual)}\". " +
-                "Verifique que ffmpeg.exe incluya el codificador libtheora o realice la conversión manual (ver LEEME.txt).");
+                $"Verifique que {GrabadorVideo.NombreEjecutableFfmpeg} incluya el codificador libtheora o realice la conversión manual (ver LEEME.txt).");
         }
     }
 
@@ -658,7 +658,7 @@ public partial class PantallaInicio : CanvasLayer
         }
         else if (_faltaFfmpeg)
         {
-            texto = "Existen videos en formato distinto de .ogv y no se encontró ffmpeg.exe para convertirlos.\n" +
+            texto = $"Existen videos en formato distinto de .ogv y no se encontró {GrabadorVideo.NombreEjecutableFfmpeg} para convertirlos.\n" +
                     "Opciones → Abrir carpeta de videos.";
         }
         else if (_lista.Count == 0)
@@ -728,7 +728,7 @@ public partial class PantallaInicio : CanvasLayer
 
         var convertir = new CheckBox
         {
-            Text = "Convertir automáticamente MP4/MOV/WEBM a .ogv (requiere ffmpeg.exe)",
+            Text = "Convertir automáticamente MP4/MOV/WEBM a .ogv (requiere FFmpeg)",
             ButtonPressed = _convertirAuto,
         };
         convertir.Toggled += activo =>
